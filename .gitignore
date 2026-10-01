@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+test_*.js
+test_*.py
+test_*.txt
+check_*.py
+step0.py
+make_*.py
+test.py
+proj.py
+start_builder.py
+verify_app.py
+template_*.py
