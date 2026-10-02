@@ -1,463 +1,1636 @@
 # -*- coding: utf-8 -*-
-# 24 Regiony fizycznogeograficzne Polski (poprawiona topologia wyżyn i łańcucha górskiego)
+# 24 Regiony fizycznogeograficzne Polski (skalibrowane ściśle według mapy referencyjnej)
 
 REGIONS_DATA = [
     {
         "id": "pobrzeze_slowinskie",
         "name": "Pobrzeże Słowińskie / Koszalińskie",
-        "category": "region",
         "belt": "pobrzeza",
         "beltName": "Pas Pobrzeży",
-        "quadrant": "NW",
-        "quadrantName": "Północny Zachód (NW)",
-        "center": [54.55, 17.10],
-        "polygon": [
-            [54.18, 15.58], [54.43, 16.41], [54.58, 16.86], [54.76, 17.55],
-            [54.83, 18.33], [54.72, 18.41], [54.54, 17.75], [54.46, 17.03],
-            [54.19, 16.18], [54.05, 15.80], [54.18, 15.58]
+        "quadrant": "N",
+        "quadrantName": "Północ (N)",
+        "center": [
+            54.38,
+            16.6
         ],
-        "keyCities": ["Kołobrzeg", "Koszalin", "Słupsk", "Ustka", "Łeba"],
-        "description": "Pas nadmorski wzdłuż Bałtyku ze Słowińskim Parkiem Narodowym, jeziorami przybrzeżnymi (Łebsko, Gardno) oraz ruchomymi wydmami.",
-        "mnemonic": "Pobrzeże Słowińskie to wydmy ruchome w Łebie i pas plaż od Kołobrzegu aż po Władysławowo!",
-        "hint": "Skrajna północna linia brzegowa Polski, na zachód od Zatoki Gdańskiej."
+        "polygon": [
+            [
+                53.95,
+                14.65
+            ],
+            [
+                54.08,
+                15.1
+            ],
+            [
+                54.2,
+                15.6
+            ],
+            [
+                54.4,
+                16.2
+            ],
+            [
+                54.55,
+                16.85
+            ],
+            [
+                54.75,
+                17.5
+            ],
+            [
+                54.83,
+                18.25
+            ],
+            [
+                54.68,
+                18.55
+            ],
+            [
+                54.45,
+                17.75
+            ],
+            [
+                54.35,
+                17.0
+            ],
+            [
+                54.1,
+                16.1
+            ],
+            [
+                53.9,
+                15.5
+            ],
+            [
+                53.8,
+                14.8
+            ],
+            [
+                53.95,
+                14.65
+            ]
+        ],
+        "keyCities": [
+            "Kołobrzeg",
+            "Koszalin",
+            "Słupsk",
+            "Ustka",
+            "Łeba"
+        ],
+        "description": "Nadmorski pas nizin i wydm wzdłuż całego środkowego wybrzeża Bałtyku ze Słowińskim Parkiem Narodowym i ruchomymi wydmami.",
+        "mnemonic": "Pobrzeże Słowińskie leży bezpośrednio nad Bałtykiem – ruchome wydmy w Łebie i pas plaż od Kołobrzegu po Hel!",
+        "hint": "Skrajna północ Polski, bezpośrednio wzdłuż linii brzegowej Bałtyku.",
+        "category": "region"
     },
     {
         "id": "nizina_szczecinska",
         "name": "Nizina Szczecińska",
-        "category": "region",
         "belt": "pobrzeza",
-        "beltName": "Pas Pobrzeży i Nizin Przymorskich",
+        "beltName": "Pas Pobrzeży",
         "quadrant": "NW",
         "quadrantName": "Północny Zachód (NW)",
-        "center": [53.45, 14.80],
-        "polygon": [
-            [53.92, 14.25], [53.97, 14.77], [53.70, 15.10], [53.34, 15.04],
-            [53.15, 14.89], [52.93, 14.87], [52.96, 14.42], [53.25, 14.48],
-            [53.55, 14.55], [53.72, 14.28], [53.92, 14.25]
+        "center": [
+            53.4,
+            14.75
         ],
-        "keyCities": ["Szczecin", "Stargard", "Świnoujście", "Goleniów", "Police"],
-        "description": "Rozległe obniżenie wokół Zalewu Szczecińskiego, dolnej Odry i jeziora Dąbie. Kraina portowa o klimacie łagodnym morskim.",
-        "mnemonic": "Nizina Szczecińska to 'brama do Bałtyku' wokół dolnej Odry i Zalewu Szczecińskiego na granicy z Niemcami.",
-        "hint": "Skrajny północny zachód Polski, ujście rzeki Odry."
+        "polygon": [
+            [
+                53.92,
+                14.25
+            ],
+            [
+                53.95,
+                14.65
+            ],
+            [
+                53.8,
+                14.8
+            ],
+            [
+                53.6,
+                15.05
+            ],
+            [
+                53.3,
+                15.0
+            ],
+            [
+                53.0,
+                14.85
+            ],
+            [
+                52.85,
+                14.4
+            ],
+            [
+                53.0,
+                14.2
+            ],
+            [
+                53.3,
+                14.4
+            ],
+            [
+                53.65,
+                14.45
+            ],
+            [
+                53.92,
+                14.25
+            ]
+        ],
+        "keyCities": [
+            "Szczecin",
+            "Świnoujście",
+            "Stargard",
+            "Police",
+            "Goleniów"
+        ],
+        "description": "Nizina w rejonie ujścia Odry do Zalewu Szczecińskiego na granicy z Niemcami. Obejmuje wyspy Wolin i Uznam.",
+        "mnemonic": "Nizina Szczecińska to skrajny północno-zachodni róg Polski – wokół Szczecina i ujścia Odry do Zalewu.",
+        "hint": "Skrajny północno-zachodni kraniec Polski przy granicy z Niemcami i ujściu Odry.",
+        "category": "region"
     },
     {
         "id": "kaszuby",
         "name": "Kaszuby",
-        "category": "region",
         "belt": "pojezierza",
         "beltName": "Pas Pojezierzy",
-        "quadrant": "NW",
-        "quadrantName": "Północny Zachód / Północ (NW)",
-        "center": [54.28, 18.05],
-        "polygon": [
-            [54.54, 17.75], [54.60, 18.24], [54.45, 18.45], [54.33, 18.40],
-            [54.12, 18.25], [53.95, 18.05], [54.00, 17.65], [54.17, 17.49],
-            [54.35, 17.60], [54.54, 17.75]
+        "quadrant": "N",
+        "quadrantName": "Północ (N)",
+        "center": [
+            54.25,
+            18.0
         ],
-        "keyCities": ["Kartuzy", "Kościerzyna", "Bytów", "Wejherowo", "Żukowo"],
-        "description": "Malownicza kraina 'Szwajcarii Kaszubskiej' z najwyższym wzniesieniem Niżu Polskiego (Wieżyca 329 m n.p.m.). Źródła rzek Wda i Wierzyca.",
-        "mnemonic": "Kaszuby leżą na południowy zachód od Trójmiasta. Pamiętaj: z Kaszub wypływają dwie siostrzane rzeki – Wda i Wierzyca!",
-        "hint": "Na zachód od Gdańska, kraina jezior i wzgórza Wieżyca."
-    },
-    {
-        "id": "pojezierze_pomorskie",
-        "name": "Pojezierze Pomorskie",
-        "category": "region",
-        "belt": "pojezierza",
-        "beltName": "Pas Pojezierzy",
-        "quadrant": "NW",
-        "quadrantName": "Północny Zachód (NW)",
-        "center": [53.70, 16.60],
         "polygon": [
-            [54.05, 15.80], [54.19, 16.18], [54.46, 17.03], [54.17, 17.49],
-            [54.00, 17.65], [53.79, 17.97], [53.59, 17.86], [53.45, 17.20],
-            [53.40, 16.30], [53.34, 15.04], [53.70, 15.10], [54.05, 15.80]
+            [
+                54.55,
+                17.75
+            ],
+            [
+                54.6,
+                18.25
+            ],
+            [
+                54.45,
+                18.55
+            ],
+            [
+                54.3,
+                18.5
+            ],
+            [
+                54.08,
+                18.35
+            ],
+            [
+                53.88,
+                18.15
+            ],
+            [
+                53.85,
+                17.75
+            ],
+            [
+                54.15,
+                17.5
+            ],
+            [
+                54.35,
+                17.6
+            ],
+            [
+                54.55,
+                17.75
+            ]
         ],
-        "keyCities": ["Drawsko Pomorskie", "Szczecinek", "Chojnice", "Człuchów", "Połczyn-Zdrój"],
-        "description": "Szeroki pas wzgórz morenowych i setek polodowcowych jezior (Pojezierze Drawskie, Bytowskie, Krajeńskie) oraz lasów Borów Tucholskich.",
-        "mnemonic": "Pojezierze Pomorskie leży tuż pod Pobrzeżem – tworzy pas jezior od Drawska po Chojnice!",
-        "hint": "Pomiędzy Pobrzeżem Słowińskim a Niziną Wielkopolską/Kujawami."
+        "keyCities": [
+            "Kartuzy",
+            "Kościerzyna",
+            "Wejherowo",
+            "Bytów",
+            "Chojnice"
+        ],
+        "description": "Malowniczy region morenowy w pasie pojezierzy na zachód od Trójmiasta ze szczytem Wieżyca (329 m n.p.m.).",
+        "mnemonic": "Kaszuby leżą na zachód od Gdańska – Szwajcaria Kaszubska z najwyższym wzgórzem niżu (Wieżyca).",
+        "hint": "Tuż na południowy zachód od Trójmiasta i Zatoki Gdańskiej, najwyższe wzgórza pojezierzy.",
+        "category": "region"
     },
     {
         "id": "zulawy_wislane",
         "name": "Żuławy Wiślane",
-        "category": "region",
         "belt": "pobrzeza",
         "beltName": "Pas Pobrzeży",
-        "quadrant": "NE",
-        "quadrantName": "Północ (NE/NW)",
-        "center": [54.20, 19.05],
-        "polygon": [
-            [54.37, 18.67], [54.38, 19.45], [54.25, 19.50], [54.16, 19.40],
-            [54.04, 19.03], [54.09, 18.79], [54.26, 18.64], [54.37, 18.67]
+        "quadrant": "N",
+        "quadrantName": "Północ (N)",
+        "center": [
+            54.2,
+            19.1
         ],
-        "keyCities": ["Nowy Dwór Gdański", "Malbork", "Elbląg", "Tczew", "Pruszcz Gdański"],
-        "description": "Płaska jak stół aluwialna delta Wisły. Znajduje się tu najniższy punkt Polski (depresja w Raczkach Elbląskich -1.8 m) oraz zamek krzyżacki w Malborku.",
-        "mnemonic": "Żuławy to żyzne mady w trójkącie delty Wisły i najgłębsza polska depresja!",
-        "hint": "Trójkątne ujście Wisły do Zatoki Gdańskiej koło Malborka i Elbląga."
+        "polygon": [
+            [
+                54.38,
+                18.68
+            ],
+            [
+                54.4,
+                19.45
+            ],
+            [
+                54.25,
+                19.55
+            ],
+            [
+                54.15,
+                19.38
+            ],
+            [
+                53.98,
+                19.05
+            ],
+            [
+                54.08,
+                18.78
+            ],
+            [
+                54.26,
+                18.64
+            ],
+            [
+                54.38,
+                18.68
+            ]
+        ],
+        "keyCities": [
+            "Malbork",
+            "Nowy Dwór Gdański",
+            "Elbląg",
+            "Tczew"
+        ],
+        "description": "Płaska, żyzna nizina deltowa Wisły z najniższym punktem Polski (Raczki Elbląskie –1,8 m p.p.m.).",
+        "mnemonic": "Żuławy Wiślane leżą u samego ujścia Wisły do Zatoki Gdańskiej – jedyna prawdziwa depresja w Polsce!",
+        "hint": "Trójkątne ujście Wisły do Bałtyku między Gdańskiem a Elblągiem.",
+        "category": "region"
+    },
+    {
+        "id": "pojezierze_pomorskie",
+        "name": "Pojezierze Pomorskie",
+        "belt": "pojezierza",
+        "beltName": "Pas Pojezierzy",
+        "quadrant": "NW",
+        "quadrantName": "Północny Zachód (NW)",
+        "center": [
+            53.7,
+            16.4
+        ],
+        "polygon": [
+            [
+                54.1,
+                16.1
+            ],
+            [
+                54.35,
+                17.0
+            ],
+            [
+                54.15,
+                17.5
+            ],
+            [
+                53.85,
+                17.75
+            ],
+            [
+                53.5,
+                17.65
+            ],
+            [
+                53.35,
+                17.5
+            ],
+            [
+                53.3,
+                16.4
+            ],
+            [
+                53.15,
+                15.2
+            ],
+            [
+                53.3,
+                15.0
+            ],
+            [
+                53.6,
+                15.05
+            ],
+            [
+                53.8,
+                14.8
+            ],
+            [
+                53.9,
+                15.5
+            ],
+            [
+                54.1,
+                16.1
+            ]
+        ],
+        "keyCities": [
+            "Szczecinek",
+            "Drawsko Pomorskie",
+            "Wałcz",
+            "Czaplinek",
+            "Złocieniec"
+        ],
+        "description": "Pas wzgórz morenowych i jezior (Drawsko) w północno-zachodniej Polsce na południe od pobrzeża.",
+        "mnemonic": "Pojezierze Pomorskie leży pod Pobrzeżem Słowińskim na północnym zachodzie – jezioro Drawsko i pagórki morenowe.",
+        "hint": "Północny zachód Polski, bezpośrednio pod Pobrzeżem Słowińskim, na wschód od Niziny Szczecińskiej.",
+        "category": "region"
     },
     {
         "id": "pojezierze_mazurskie",
         "name": "Pojezierze Mazurskie",
-        "category": "region",
         "belt": "pojezierza",
         "beltName": "Pas Pojezierzy",
         "quadrant": "NE",
         "quadrantName": "Północny Wschód (NE)",
-        "center": [53.85, 21.40],
-        "polygon": [
-            [54.33, 20.50], [54.33, 21.50], [54.33, 22.30], [54.10, 22.45],
-            [53.83, 22.36], [53.50, 22.00], [53.56, 20.99], [53.58, 20.28],
-            [53.78, 20.48], [54.12, 20.58], [54.33, 20.50]
+        "center": [
+            53.85,
+            21.4
         ],
-        "keyCities": ["Olsztyn", "Giżycko", "Mikołajki", "Mrągowo", "Ełk", "Szczytno"],
-        "description": "Kraina Tysiąca Jezior z największymi jeziorami Polski (Śniardwy i Mamry). Obejmuje Pojezierze Olsztyńskie, Mrągowskie, Krainę Wielkich Jezior i Pojezierze Ełckie.",
-        "mnemonic": "Mazury = Kraina Wielkich Jezior (Śniardwy i Mamry) w północno-wschodniej Polsce!",
-        "hint": "Północny wschód Polski, kraina największych jezior."
-    },
-    {
-        "id": "nizina_podlaska",
-        "name": "Nizina Podlaska",
-        "category": "region",
-        "belt": "niziny",
-        "beltName": "Pas Nizin Środkowopolskich",
-        "quadrant": "NE",
-        "quadrantName": "Północny Wschód / Wschód (NE)",
-        "center": [53.10, 23.00],
         "polygon": [
-            [53.83, 22.36], [54.15, 23.55], [53.60, 23.85], [53.25, 23.95],
-            [52.70, 23.85], [52.43, 22.86], [52.65, 22.40], [53.05, 22.20],
-            [53.50, 22.00], [53.83, 22.36]
+            [
+                54.33,
+                20.3
+            ],
+            [
+                54.35,
+                21.5
+            ],
+            [
+                54.33,
+                22.4
+            ],
+            [
+                54.1,
+                22.5
+            ],
+            [
+                53.83,
+                22.36
+            ],
+            [
+                53.45,
+                21.8
+            ],
+            [
+                53.35,
+                20.8
+            ],
+            [
+                53.45,
+                20.1
+            ],
+            [
+                53.75,
+                20.15
+            ],
+            [
+                54.12,
+                20.3
+            ],
+            [
+                54.33,
+                20.3
+            ]
         ],
-        "keyCities": ["Białystok", "Bielsk Podlaski", "Hajnówka", "Sokółka", "Łomża"],
-        "description": "Płaska nizina wschodniej Polski z unikalnymi puszczami (Białowieska, Knyszyńska, Augustowska) oraz dolinami rzek Biebrzy i Narwi.",
-        "mnemonic": "Podlasie to żubry w Białowieży i dzika rzeka Narew przy granicy z Białorusią.",
-        "hint": "Wschód Polski wokół Białegostoku, doliny Narwi i Biebrzy."
-    },
-    {
-        "id": "nizina_mazowiecka",
-        "name": "Nizina Mazowiecka",
-        "category": "region",
-        "belt": "niziny",
-        "beltName": "Pas Nizin Środkowopolskich",
-        "quadrant": "C",
-        "quadrantName": "Centrum (C / E)",
-        "center": [52.30, 21.00],
-        "polygon": [
-            [53.11, 20.38], [53.08, 21.57], [53.05, 22.20], [52.65, 22.40],
-            [52.17, 22.28], [51.63, 21.93], [51.40, 21.15], [51.70, 20.50],
-            [52.10, 19.80], [52.54, 19.70], [52.85, 19.67], [53.11, 20.38]
+        "keyCities": [
+            "Olsztyn",
+            "Giżycko",
+            "Mikołajki",
+            "Mrągowo",
+            "Ełk"
         ],
-        "keyCities": ["Warszawa", "Radom", "Płock", "Siedlce", "Ciechanów", "Ostrołęka"],
-        "description": "Największy region nizinny w centrum kraju, kotlina zbiegu najważniejszych rzek: Wisły, Narwi, Bugu, Pilicy i Bzury.",
-        "mnemonic": "Mazowsze to serce Polski z Warszawą, gdzie wszystkie wielkie rzeki spotykają się z Wisłą!",
-        "hint": "Środek i wschód Polski, otacza stolicę – Warszawę."
-    },
-    {
-        "id": "polesie_lubelskie",
-        "name": "Polesie Lubelskie",
-        "category": "region",
-        "belt": "niziny",
-        "beltName": "Pas Nizin Środkowopolskich",
-        "quadrant": "SE",
-        "quadrantName": "Wschód (SE)",
-        "center": [51.45, 23.30],
-        "polygon": [
-            [51.85, 23.40], [51.55, 23.55], [51.16, 23.81], [51.13, 23.47],
-            [51.30, 22.88], [51.64, 22.90], [51.85, 23.40]
-        ],
-        "keyCities": ["Włodawa", "Parczew", "Łęczna", "Urszulin"],
-        "description": "Kraina rozległych torfowisk, bagien i jezior krasowych (Poleski Park Narodowy) wzdłuż rzeki Bug na wschodniej granicy.",
-        "mnemonic": "Polesie Lubelskie = Poleski Park Narodowy z żółwiem błotnym i bagnami nad rzeką Bug!",
-        "hint": "Pomiędzy Niziną Mazowiecką a Wyżyną Lubelską, przy wschodniej granicy."
+        "description": "Kraina Wielkich Jezior Mazurskich (Śniardwy, Mamry) w północno-wschodniej Polsce o unikalnym polodowcowym krajobrazie.",
+        "mnemonic": "Pojezierze Mazurskie to Kraina Wielkich Jezior na północnym wschodzie – Śniardwy, Mamry i Olsztyn!",
+        "hint": "Północny wschód Polski, kraina największych polskich jezior.",
+        "category": "region"
     },
     {
         "id": "pojezierze_wielkopolskie",
         "name": "Pojezierze Wielkopolskie",
-        "category": "region",
         "belt": "pojezierza",
         "beltName": "Pas Pojezierzy",
-        "quadrant": "NW",
-        "quadrantName": "Zachód / Centrum (NW)",
-        "center": [52.45, 17.20],
-        "polygon": [
-            [52.81, 17.20], [52.75, 17.49], [52.65, 17.95], [52.32, 17.58],
-            [52.15, 17.10], [52.30, 16.50], [52.61, 16.58], [52.81, 17.20]
+        "quadrant": "W",
+        "quadrantName": "Zachód i Centrum (W)",
+        "center": [
+            52.55,
+            16.8
         ],
-        "keyCities": ["Poznań", "Gniezno", "Wągrowiec", "Września", "Szamotuły"],
-        "description": "Kolebka państwa polskiego z jeziorem Gopło, Gnieznem i Poznaniem. Rzeźba polodowcowa z pagórkami morenowymi i jeziorami rynnowymi.",
-        "mnemonic": "Pojezierze Wielkopolskie to historyczny początek Polski (Gniezno, Ostrów Lednicki) na północ od Warty.",
-        "hint": "Wokół Poznania i Gniezna, na zachód od Kujaw."
+        "polygon": [
+            [
+                52.6,
+                15.1
+            ],
+            [
+                52.85,
+                15.8
+            ],
+            [
+                53.12,
+                16.5
+            ],
+            [
+                53.15,
+                17.2
+            ],
+            [
+                52.88,
+                17.65
+            ],
+            [
+                52.75,
+                18.15
+            ],
+            [
+                52.45,
+                18.15
+            ],
+            [
+                52.28,
+                17.6
+            ],
+            [
+                52.18,
+                16.8
+            ],
+            [
+                52.2,
+                15.8
+            ],
+            [
+                52.38,
+                15.1
+            ],
+            [
+                52.6,
+                15.1
+            ]
+        ],
+        "keyCities": [
+            "Poznań",
+            "Gniezno",
+            "Szamotuły",
+            "Wągrowiec",
+            "Września"
+        ],
+        "description": "Szerokie pojezierze w zachodnio-centralnej Polsce ciągnące się od Ziemi Lubuskiej przez Poznań i Gniezno aż do Kujaw, z charakterystycznym wybrzuszeniem na północ ku Noteci.",
+        "mnemonic": "Pojezierze Wielkopolskie rozciąga się w sercu zachodniej Polski – kolebka państwa wokół Poznania i Gniezna!",
+        "hint": "Zachodnio-centralna Polska wokół Poznania i Gniezna, na południe od Noteci.",
+        "category": "region"
     },
     {
         "id": "kujawy",
         "name": "Kujawy",
-        "category": "region",
         "belt": "pojezierza",
-        "beltName": "Pas Pojezierzy / Nizin",
+        "beltName": "Pas Pojezierzy",
         "quadrant": "C",
-        "quadrantName": "Północne Centrum (C)",
-        "center": [52.70, 18.60],
-        "polygon": [
-            [52.90, 18.41], [52.88, 18.79], [52.65, 19.07], [52.50, 18.80],
-            [52.45, 18.35], [52.65, 17.95], [52.79, 18.26], [52.90, 18.41]
+        "quadrantName": "Centrum (C/N)",
+        "center": [
+            52.68,
+            18.75
         ],
-        "keyCities": ["Inowrocław", "Włocławek", "Kruszwica", "Ciechocinek", "Radziejów"],
-        "description": "Kraina w 'kolanie Wisły' słynąca z wyjątkowo żyznych czarnych ziem kujawskich, tężni solankowych w Inowrocławiu i Ciechocinku oraz Mysiej Wieży w Kruszwicy.",
-        "mnemonic": "Kujawy leżą w kolanie Wisły – zapamiętaj: żyzne czarne ziemie i sól w Ciechocinku!",
-        "hint": "Na zachód od Wisły pomiędzy Toruniem, Bydgoszczą a Włocławkiem."
+        "polygon": [
+            [
+                52.95,
+                18.4
+            ],
+            [
+                52.95,
+                18.95
+            ],
+            [
+                52.75,
+                19.35
+            ],
+            [
+                52.45,
+                19.25
+            ],
+            [
+                52.38,
+                18.7
+            ],
+            [
+                52.45,
+                18.15
+            ],
+            [
+                52.75,
+                18.15
+            ],
+            [
+                52.95,
+                18.4
+            ]
+        ],
+        "keyCities": [
+            "Inowrocław",
+            "Włocławek",
+            "Kruszwica",
+            "Radziejów"
+        ],
+        "description": "Urodzajna kraina czarnych ziem w widłach i zakolu dolnej Wisły z jeziorem Gopło i historyczną Kruszwicą.",
+        "mnemonic": "Kujawy to czarne ziemie i legendarne Gopło z Mysią Wieżą w Kruszwicy – wcięte między Wielkopolskę a Mazowsze!",
+        "hint": "Ścisłe centrum/północ, czarne ziemie i jezioro Gopło pod zakolem Wisły.",
+        "category": "region"
+    },
+    {
+        "id": "nizina_mazowiecka",
+        "name": "Nizina Mazowiecka",
+        "belt": "niziny",
+        "beltName": "Pas Nizin Środkowopolskich",
+        "quadrant": "C",
+        "quadrantName": "Centrum i Wschód (C/E)",
+        "center": [
+            52.3,
+            21.0
+        ],
+        "polygon": [
+            [
+                53.15,
+                20.3
+            ],
+            [
+                53.1,
+                21.5
+            ],
+            [
+                52.95,
+                22.05
+            ],
+            [
+                52.6,
+                22.25
+            ],
+            [
+                52.15,
+                22.15
+            ],
+            [
+                51.6,
+                21.8
+            ],
+            [
+                51.35,
+                21.15
+            ],
+            [
+                51.55,
+                20.3
+            ],
+            [
+                52.05,
+                19.5
+            ],
+            [
+                52.45,
+                19.25
+            ],
+            [
+                52.75,
+                19.35
+            ],
+            [
+                53.15,
+                20.3
+            ]
+        ],
+        "keyCities": [
+            "Warszawa",
+            "Płock",
+            "Radom",
+            "Siedlce",
+            "Ciechanów"
+        ],
+        "description": "Rozległa nizina w sercu Polski z Kotliną Warszawską, Puszczą Kampinoską i węzłem rzecznym Wisły, Narwi i Bugu.",
+        "mnemonic": "Nizina Mazowiecka to największa kraina w centrum Polski – stolica Warszawa, Puszcza Kampinoska i centralna Wisła.",
+        "hint": "Środek i wschód kraju wokół Warszawy i ujścia Narwi do Wisły.",
+        "category": "region"
+    },
+    {
+        "id": "nizina_podlaska",
+        "name": "Nizina Podlaska",
+        "belt": "niziny",
+        "beltName": "Pas Nizin Środkowopolskich",
+        "quadrant": "E",
+        "quadrantName": "Wschód (E)",
+        "center": [
+            53.1,
+            23.0
+        ],
+        "polygon": [
+            [
+                53.8,
+                22.4
+            ],
+            [
+                54.05,
+                23.5
+            ],
+            [
+                53.6,
+                23.85
+            ],
+            [
+                53.25,
+                23.95
+            ],
+            [
+                52.7,
+                23.85
+            ],
+            [
+                52.15,
+                23.1
+            ],
+            [
+                52.15,
+                22.15
+            ],
+            [
+                52.6,
+                22.25
+            ],
+            [
+                52.95,
+                22.05
+            ],
+            [
+                53.45,
+                21.8
+            ],
+            [
+                53.8,
+                22.4
+            ]
+        ],
+        "keyCities": [
+            "Białystok",
+            "Bielsk Podlaski",
+            "Hajnówka",
+            "Łomża",
+            "Siemiatycze"
+        ],
+        "description": "Nizina we wschodniej Polsce z dziewiczą Puszczą Białowieską, Narwiańskim i Biebrzańskim Parkiem Narodowym.",
+        "mnemonic": "Nizina Podlaska leży na wschodzie w dorzeczu Narwi i Biebrzy – żubry w Puszczy Białowieskiej!",
+        "hint": "Pas wschodni wzdłuż granicy, na wschód od Niziny Mazowieckiej (Białystok).",
+        "category": "region"
+    },
+    {
+        "id": "polesie_lubelskie",
+        "name": "Polesie Lubelskie",
+        "belt": "niziny",
+        "beltName": "Pas Nizin Środkowopolskich",
+        "quadrant": "E",
+        "quadrantName": "Wschód (E)",
+        "center": [
+            51.5,
+            23.4
+        ],
+        "polygon": [
+            [
+                51.85,
+                23.35
+            ],
+            [
+                51.65,
+                23.65
+            ],
+            [
+                51.2,
+                23.8
+            ],
+            [
+                51.15,
+                23.25
+            ],
+            [
+                51.35,
+                22.85
+            ],
+            [
+                51.7,
+                22.85
+            ],
+            [
+                51.85,
+                23.35
+            ]
+        ],
+        "keyCities": [
+            "Włodawa",
+            "Łęczna",
+            "Urszulin",
+            "Sosnowica"
+        ],
+        "description": "Płaska, bagnisto-jeziorna kraina na wschodniej granicy nad Bugiem z Poleskim Parkiem Narodowym i żółwiem błotnym.",
+        "mnemonic": "Polesie Lubelskie leży przy wschodniej granicy nad Bugiem – bagna, torfowiska i Poleski Park Narodowy.",
+        "hint": "Wschodni kraniec Polski wzdłuż rzeki Bug, między Podlasiem a Wyżyną Lubelską.",
+        "category": "region"
     },
     {
         "id": "nizina_wielkopolska",
         "name": "Nizina Wielkopolska",
-        "category": "region",
         "belt": "niziny",
         "beltName": "Pas Nizin Środkowopolskich",
-        "quadrant": "NW",
-        "quadrantName": "Zachód (NW/C)",
-        "center": [51.80, 17.60],
-        "polygon": [
-            [52.15, 17.10], [52.32, 17.58], [52.22, 18.25], [52.20, 18.64],
-            [51.85, 18.70], [51.60, 18.50], [51.45, 17.80], [51.55, 16.90],
-            [51.84, 16.58], [52.09, 16.65], [52.15, 17.10]
+        "quadrant": "W",
+        "quadrantName": "Zachód i Centrum (W/SW)",
+        "center": [
+            51.8,
+            17.5
         ],
-        "keyCities": ["Kalisz", "Konin", "Ostrów Wielkopolski", "Leszno", "Krotoszyn"],
-        "description": "Rolnicza równina w dorzeczu Warty i Prosny, na południe od Pojezierza Wielkopolskiego. Kalisz uznawany jest za najstarsze miasto w Polsce.",
-        "mnemonic": "Nizina Wielkopolska rozciąga się wzdłuż Warty i Prosny wokół najstarszego Kalisza i Leszna!",
-        "hint": "Południowa Wielkopolska, na południe od Poznania i na północ od Śląska."
+        "polygon": [
+            [
+                52.2,
+                15.8
+            ],
+            [
+                52.18,
+                16.8
+            ],
+            [
+                52.28,
+                17.6
+            ],
+            [
+                52.45,
+                18.15
+            ],
+            [
+                52.38,
+                18.7
+            ],
+            [
+                52.05,
+                19.5
+            ],
+            [
+                51.55,
+                20.3
+            ],
+            [
+                51.2,
+                19.5
+            ],
+            [
+                51.35,
+                18.4
+            ],
+            [
+                51.35,
+                17.6
+            ],
+            [
+                51.5,
+                16.8
+            ],
+            [
+                51.75,
+                15.8
+            ],
+            [
+                52.0,
+                15.3
+            ],
+            [
+                52.2,
+                15.8
+            ]
+        ],
+        "keyCities": [
+            "Kalisz",
+            "Konin",
+            "Leszno",
+            "Ostrów Wielkopolski",
+            "Sieradz",
+            "Piotrków Trybunalski"
+        ],
+        "description": "Płaska nizina w południowej Wielkopolsce ze starym miastem Kaliszem nad Prosną.",
+        "mnemonic": "Nizina Wielkopolska leży na południe od pojezierza – najstarsze miasto Kalisz nad rzeką Prosną!",
+        "hint": "Południowo-zachodnie centrum Polski, na południe od Poznania wokół Kalisza.",
+        "category": "region"
     },
     {
         "id": "nizina_slaska",
         "name": "Nizina Śląska",
-        "category": "region",
         "belt": "niziny",
         "beltName": "Pas Nizin Środkowopolskich",
         "quadrant": "SW",
         "quadrantName": "Południowy Zachód (SW)",
-        "center": [50.95, 17.20],
-        "polygon": [
-            [51.66, 16.08], [51.55, 16.90], [51.11, 17.50], [50.67, 18.10],
-            [50.35, 18.21], [50.09, 18.22], [50.32, 17.58], [50.70, 16.90],
-            [51.05, 16.19], [51.40, 16.20], [51.66, 16.08]
+        "center": [
+            50.95,
+            17.1
         ],
-        "keyCities": ["Wrocław", "Opole", "Legnica", "Lubin", "Brzeg", "Oława"],
-        "description": "Ciepła, urodzajna nizina w dolinie Odry z najdłuższym okresem wegetacyjnym w Polsce. Bogata w czarnoziemy i zabytki Wrocławia.",
-        "mnemonic": "Nizina Śląska = Wrocław i rzeka Odra. Najcieplejszy region nizinny w Polsce!",
-        "hint": "Wzdłuż biegu Odry na południowym zachodzie wokół Wrocławia i Opola."
+        "polygon": [
+            [
+                51.66,
+                16.08
+            ],
+            [
+                51.5,
+                16.8
+            ],
+            [
+                51.35,
+                17.6
+            ],
+            [
+                50.85,
+                18.2
+            ],
+            [
+                50.4,
+                18.35
+            ],
+            [
+                50.05,
+                18.3
+            ],
+            [
+                50.25,
+                17.6
+            ],
+            [
+                50.6,
+                17.0
+            ],
+            [
+                50.95,
+                16.3
+            ],
+            [
+                51.35,
+                16.1
+            ],
+            [
+                51.66,
+                16.08
+            ]
+        ],
+        "keyCities": [
+            "Wrocław",
+            "Opole",
+            "Legnica",
+            "Brzeg",
+            "Kędzierzyn-Koźle"
+        ],
+        "description": "Ciepła, urodzajna nizina w dolinie górnej i środkowej Odry na Dolnym i Opolskim Śląsku z Wrocławiem.",
+        "mnemonic": "Nizina Śląska ciągnie się wzdłuż Odry od Wrocławia do Opola – najcieplejszy region w Polsce!",
+        "hint": "Południowy zachód kraju w dolinie Odry wokół Wrocławia i Opola, tuż pod Sudetami.",
+        "category": "region"
     },
     {
         "id": "sudety",
         "name": "Sudety",
-        "category": "region",
         "belt": "gory",
         "beltName": "Pas Gór (Sudety)",
         "quadrant": "SW",
         "quadrantName": "Południowy Zachód (SW)",
-        "center": [50.60, 16.10],
-        "polygon": [
-            [50.91, 15.34], [51.05, 16.19], [50.70, 16.90], [50.44, 16.88],
-            [50.15, 16.85], [50.15, 16.66], [50.44, 16.24], [50.74, 15.74],
-            [50.82, 15.44], [50.91, 15.34]
+        "center": [
+            50.6,
+            16.1
         ],
-        "keyCities": ["Wałbrzych", "Jelenia Góra", "Kłodzko", "Karpacz", "Szklarska Poręba"],
-        "description": "Góry zrębowe na granicy z Czechami z Karkonoszami (Śnieżka 1603 m), Górami Stołowymi (Szczeliniec Wielki) i Kotliną Kłodzką.",
-        "mnemonic": "Sudety to góry na południowo-zachodniej granicy: Śnieżka, Karkonosze i Kotlina Kłodzka!",
-        "hint": "Południowo-zachodnia granica z Czechami."
+        "polygon": [
+            [
+                50.91,
+                15.1
+            ],
+            [
+                51.05,
+                15.8
+            ],
+            [
+                50.95,
+                16.3
+            ],
+            [
+                50.6,
+                17.0
+            ],
+            [
+                50.35,
+                17.1
+            ],
+            [
+                50.15,
+                16.85
+            ],
+            [
+                50.15,
+                16.4
+            ],
+            [
+                50.44,
+                16.1
+            ],
+            [
+                50.74,
+                15.5
+            ],
+            [
+                50.85,
+                15.1
+            ],
+            [
+                50.91,
+                15.1
+            ]
+        ],
+        "keyCities": [
+            "Jelenia Góra",
+            "Wałbrzych",
+            "Kłodzko",
+            "Karpacz",
+            "Szklarska Poręba"
+        ],
+        "description": "Góry zrębowe na granicy polsko-czeskiej z Karkonoszami (Śnieżka 1603 m n.p.m.), Górami Stołowymi i Kotliną Kłodzką.",
+        "mnemonic": "Sudety to góry na południowo-zachodniej granicy – Śnieżka, Karkonosze i zręby skalne.",
+        "hint": "Skrajny południowy zachód Polski wzdłuż granicy z Czechami wokół Karkonoszy.",
+        "category": "region"
     },
     {
         "id": "wyzyna_slaska",
         "name": "Wyżyna Śląska",
-        "category": "region",
         "belt": "wyzyny",
         "beltName": "Pas Wyżyn Polskich",
-        "quadrant": "SW",
-        "quadrantName": "Południe / Śląsk (SW/S)",
-        "center": [50.28, 18.80],
-        # Wyżyna Śląska leży NA ZACHÓD od Jury (obok siebie, zachód-wschód!)
-        "polygon": [
-            [50.55, 18.50], [50.52, 18.95], [50.45, 19.10], [50.25, 19.15],
-            [50.08, 19.00], [49.98, 18.85], [50.05, 18.45], [50.25, 18.35],
-            [50.45, 18.40], [50.55, 18.50]
+        "quadrant": "S",
+        "quadrantName": "Południe (S)",
+        "center": [
+            50.28,
+            18.85
         ],
-        "keyCities": ["Katowice", "Gliwice", "Bytom", "Zabrze", "Rybnik", "Tychy", "Tarnowskie Góry"],
-        "description": "Górnośląski Okręg Przemysłowy. Leży NA ZACHÓD od Jury Krakowsko-Częstochowskiej. Bogate złoża węgla kamiennego, cynku i ołowiu.",
-        "mnemonic": "Wyżyna Śląska leży NA ZACHÓD od Jury: Katowice i przemysł węglowy sąsiadują od wschodu ze skałkami Jury!",
-        "hint": "Południowa Polska wokół Katowic – leży na zachód od Wyżyny Krakowsko-Częstochowskiej."
+        "polygon": [
+            [
+                50.55,
+                18.45
+            ],
+            [
+                50.55,
+                18.95
+            ],
+            [
+                50.45,
+                19.12
+            ],
+            [
+                50.2,
+                19.15
+            ],
+            [
+                49.98,
+                19.0
+            ],
+            [
+                49.95,
+                18.6
+            ],
+            [
+                50.15,
+                18.35
+            ],
+            [
+                50.4,
+                18.35
+            ],
+            [
+                50.55,
+                18.45
+            ]
+        ],
+        "keyCities": [
+            "Katowice",
+            "Gliwice",
+            "Zabrze",
+            "Bytom",
+            "Sosnowiec",
+            "Rybnik"
+        ],
+        "description": "Bogata w węgiel kamienny wyżyna na Górnym Śląsku, z największą w Polsce aglomeracją miejsko-przemysłową.",
+        "mnemonic": "Wyżyna Śląska leży po ZACHODNIEJ stronie Jury – Katowice, kopalnie i aglomeracja górnośląska!",
+        "hint": "Południe Polski wokół Katowic, na ZACHÓD od wąskiego pasma Jury Krakowsko-Częstochowskiej.",
+        "category": "region"
     },
     {
         "id": "wyzyna_krakowsko_czestochowska",
         "name": "Wyżyna Krakowsko-Częstochowska",
-        "category": "region",
         "belt": "wyzyny",
         "beltName": "Pas Wyżyn Polskich",
-        "quadrant": "C",
-        "quadrantName": "Południowe Centrum (SW/C)",
-        "center": [50.45, 19.50],
-        # Wąski pas skośny biegnący od Częstochowy (NW) do Krakowa (SE), NA WSCHÓD od Wyżyny Śląskiej!
-        "polygon": [
-            [50.85, 19.12], [50.78, 19.38], [50.60, 19.62], [50.40, 19.72],
-            [50.18, 19.88], [50.06, 19.95], [50.08, 19.68], [50.25, 19.45],
-            [50.48, 19.20], [50.72, 19.05], [50.85, 19.12]
+        "quadrant": "S",
+        "quadrantName": "Południe (S)",
+        "center": [
+            50.45,
+            19.5
         ],
-        "keyCities": ["Częstochowa", "Zawiercie", "Ogrodzieniec", "Olkusz", "Ojców", "Kraków (północ)"],
-        "description": "Wąski pas wapiennych skałek i jaskiń (Jura) ciągnący się od Częstochowy na południowy wschód do Krakowa. Przylega od wschodu do Wyżyny Śląskiej!",
-        "mnemonic": "Jura Krakowsko-Częstochowska to wąski pas skałek biegnący SKOŚNIE od Częstochowy do Krakowa – leży NA WSCHÓD od Wyżyny Śląskiej!",
-        "hint": "Wąski pas skałek wapiennych od Częstochowy do Krakowa, na wschód od Śląska."
+        "polygon": [
+            [
+                50.85,
+                19.12
+            ],
+            [
+                50.8,
+                19.4
+            ],
+            [
+                50.6,
+                19.65
+            ],
+            [
+                50.35,
+                19.75
+            ],
+            [
+                50.15,
+                19.92
+            ],
+            [
+                50.02,
+                19.95
+            ],
+            [
+                50.05,
+                19.65
+            ],
+            [
+                50.25,
+                19.4
+            ],
+            [
+                50.45,
+                19.12
+            ],
+            [
+                50.7,
+                19.05
+            ],
+            [
+                50.85,
+                19.12
+            ]
+        ],
+        "keyCities": [
+            "Częstochowa",
+            "Kraków",
+            "Olkusz",
+            "Zawiercie",
+            "Ojców"
+        ],
+        "description": "Wapienne pasmo z ostańcami (Maczuga Herkulesa), jaskiniami i zamkami na Szlaku Orlich Gniazd.",
+        "mnemonic": "Wyżyna Krakowsko-Częstochowska to wąski skośny pas skał wapiennych od Częstochowy na północy do Krakowa na południu!",
+        "hint": "Wąski pas biegnący ukośnie na WSCHÓD od Katowic, od Częstochowy do Krakowa.",
+        "category": "region"
     },
     {
         "id": "wyzyna_kielecka",
         "name": "Wyżyna Kielecka",
-        "category": "region",
         "belt": "wyzyny",
         "beltName": "Pas Wyżyn Polskich",
-        "quadrant": "SE",
-        "quadrantName": "Południowe Centrum (C/SE)",
-        "center": [50.90, 20.90],
-        "polygon": [
-            [51.19, 20.41], [51.12, 20.87], [51.04, 21.35], [50.90, 21.65],
-            [50.68, 21.75], [50.65, 21.10], [50.75, 20.50], [50.95, 20.40],
-            [51.19, 20.41]
+        "quadrant": "S",
+        "quadrantName": "Południowe Centrum (S/C)",
+        "center": [
+            50.92,
+            20.9
         ],
-        "keyCities": ["Kielce", "Ostrowiec Świętokrzyski", "Starachowice", "Skarżysko-Kamienna", "Sandomierz"],
-        "description": "Obejmuje pradawne Góry Świętokrzyskie z gołoborzami kwarcytowymi (Łysica 614 m) oraz dolinę rzeki Kamiennej (Staropolski Okręg Przemysłowy).",
-        "mnemonic": "Wyżyna Kielecka to Góry Świętokrzyskie, Łysica, gołoborza i rzeka Kamienna!",
-        "hint": "Wokół Kielc, pomiędzy Wisłą a Niecką Nidziańską."
+        "polygon": [
+            [
+                51.25,
+                20.0
+            ],
+            [
+                51.2,
+                20.8
+            ],
+            [
+                51.05,
+                21.6
+            ],
+            [
+                50.85,
+                21.85
+            ],
+            [
+                50.65,
+                21.75
+            ],
+            [
+                50.68,
+                20.8
+            ],
+            [
+                50.75,
+                20.2
+            ],
+            [
+                50.95,
+                19.9
+            ],
+            [
+                51.25,
+                20.0
+            ]
+        ],
+        "keyCities": [
+            "Kielce",
+            "Ostrowiec Świętokrzyski",
+            "Starachowice",
+            "Sandomierz",
+            "Skarżysko-Kamienna"
+        ],
+        "description": "Wyżyna Kielecko-Sandomierska ze starożytnymi Górami Świętokrzyskimi (Łysica 614 m n.p.m.) i gołoborzami, sięgająca Sandomierza.",
+        "mnemonic": "Wyżyna Kielecka (Kielecko-Sandomierska) leży na PÓŁNOC od Niecki Nidziańskiej – Góry Świętokrzyskie, Kielce i Sandomierz!",
+        "hint": "Południowe centrum kraju, Góry Świętokrzyskie z Kielcami, na północ od Niecki Nidziańskiej.",
+        "category": "region"
     },
     {
         "id": "niecka_nidzianska",
         "name": "Niecka Nidziańska",
-        "category": "region",
         "belt": "wyzyny",
         "beltName": "Pas Wyżyn Polskich",
-        "quadrant": "C",
-        "quadrantName": "Południe / Centrum (C/SE)",
-        "center": [50.50, 20.40],
-        # Obniżenie wzdłuż Nidy między Wyżyną Krakowsko-Częstochowską a Kielecką
-        "polygon": [
-            [50.80, 19.85], [50.72, 20.45], [50.62, 20.95], [50.36, 20.89],
-            [50.25, 20.50], [50.30, 20.05], [50.52, 19.80], [50.80, 19.85]
+        "quadrant": "S",
+        "quadrantName": "Południe (S)",
+        "center": [
+            50.48,
+            20.45
         ],
-        "keyCities": ["Pińczów", "Busko-Zdrój", "Jędrzejów", "Kazimierza Wielka"],
-        "description": "Obniżenie między Wyżyną Krakowsko-Częstochowską a Kielecką, w dolinie rzeki Nidy. Słynie ze złóż gipsu i uzdrowisk z wodami siarczkowymi.",
-        "mnemonic": "Niecka Nidziańska leży W OBNAŻENIU (niecce) wzdłuż Nidy, pomiędzy Jurą a Kielcami – słynie z gipsu i Buska-Zdroju!",
-        "hint": "Obniżenie terenu między Wyżyną Krakowsko-Częstochowską a Wyżyną Kielecką."
+        "polygon": [
+            [
+                50.75,
+                20.2
+            ],
+            [
+                50.68,
+                20.8
+            ],
+            [
+                50.65,
+                21.4
+            ],
+            [
+                50.4,
+                21.45
+            ],
+            [
+                50.2,
+                20.8
+            ],
+            [
+                50.15,
+                20.2
+            ],
+            [
+                50.35,
+                19.75
+            ],
+            [
+                50.6,
+                19.65
+            ],
+            [
+                50.75,
+                20.2
+            ]
+        ],
+        "keyCities": [
+            "Pińczów",
+            "Busko-Zdrój",
+            "Jędrzejów",
+            "Kazimierza Wielka"
+        ],
+        "description": "Obniżenie w pasie wyżyn w dorzeczu rzeki Nidy pod Wyżyną Kielecką, słynące ze złóż gipsu i uzdrowisk.",
+        "mnemonic": "Niecka Nidziańska leży w dolinie Nidy BEZPOŚREDNIO POD Wyżyną Kielecką – złoża gipsu i Busko-Zdrój!",
+        "hint": "Obniżenie między Wyżyną Krakowsko-Częstochowską a Kielecką, w dolinie rzeki Nidy.",
+        "category": "region"
     },
     {
         "id": "wyzyna_lubelska",
         "name": "Wyżyna Lubelska",
-        "category": "region",
         "belt": "wyzyny",
         "beltName": "Pas Wyżyn Polskich",
         "quadrant": "SE",
         "quadrantName": "Południowy Wschód (SE)",
-        "center": [51.10, 22.70],
-        "polygon": [
-            [51.42, 21.97], [51.30, 22.88], [51.13, 23.47], [50.65, 23.50],
-            [50.54, 22.72], [50.88, 21.85], [51.32, 21.95], [51.42, 21.97]
+        "center": [
+            50.95,
+            22.8
         ],
-        "keyCities": ["Lublin", "Chełm", "Zamość", "Puławy", "Kazimierz Dolny", "Kraśnik"],
-        "description": "Falista wyżyna pokryta grubą warstwą lessu z malowniczymi wąwozami (Kazimierz Dolny), uprawą chmielu i buraków oraz renesansowym Zamościem.",
-        "mnemonic": "Wyżyna Lubelska = lessowe wąwozy w Kazimierzu Dolnym, Lublin i twierdza Zamość na wschód od Wisły!",
-        "hint": "Na wschód od doliny środkowej Wisły, wokół Lublina i Zamościa."
+        "polygon": [
+            [
+                51.45,
+                21.9
+            ],
+            [
+                51.35,
+                22.75
+            ],
+            [
+                51.15,
+                23.25
+            ],
+            [
+                50.7,
+                23.7
+            ],
+            [
+                50.25,
+                23.6
+            ],
+            [
+                50.4,
+                22.7
+            ],
+            [
+                50.75,
+                21.9
+            ],
+            [
+                51.15,
+                21.8
+            ],
+            [
+                51.45,
+                21.9
+            ]
+        ],
+        "keyCities": [
+            "Lublin",
+            "Zamość",
+            "Chełm",
+            "Puławy",
+            "Kraśnik",
+            "Tomaszów Lubelski"
+        ],
+        "description": "Lessowa wyżyna na wschód od Wisły ze słynnymi wąwozami (Kazimierz Dolny), renesansowym Zamościem i pasmem Roztocza.",
+        "mnemonic": "Wyżyna Lubelska leży na wschód od Wisły z Lublinem, wąwozami lessowymi i Roztoczem!",
+        "hint": "Wschód Polski, na wschód od środkowej Wisły wokół Lublina i Zamościa.",
+        "category": "region"
     },
     {
         "id": "kotlina_sandomierska",
         "name": "Kotlina Sandomierska",
-        "category": "region",
         "belt": "kotliny",
         "beltName": "Pas Kotlin Podkarpackich",
         "quadrant": "SE",
         "quadrantName": "Południowy Wschód (SE)",
-        "center": [50.25, 21.80],
-        "polygon": [
-            [50.68, 21.75], [50.58, 22.06], [50.30, 22.70], [50.02, 22.68],
-            [49.95, 21.60], [49.97, 20.43], [50.24, 20.73], [50.41, 21.36],
-            [50.68, 21.75]
+        "center": [
+            50.25,
+            21.7
         ],
-        "keyCities": ["Rzeszów", "Tarnobrzeg", "Stalowa Wola", "Tarnów", "Mielec", "Dębica"],
-        "description": "Trójkątne zapadlisko podkarpackie u zbiegu Wisły i Sanu. Obejmuje doliny Wisłoki i Sanu oraz Puszczę Sandomierską.",
-        "mnemonic": "Kotlina Sandomierska to wielki trójkąt u stóp Karpat, gdzie San i Wisłoka wpływają do Wisły!",
-        "hint": "Trójkątne obniżenie na południowym wschodzie, pod Karpatami, wokół Rzeszowa."
+        "polygon": [
+            [
+                50.65,
+                21.75
+            ],
+            [
+                50.45,
+                22.8
+            ],
+            [
+                50.15,
+                22.85
+            ],
+            [
+                49.95,
+                22.8
+            ],
+            [
+                49.95,
+                21.4
+            ],
+            [
+                49.98,
+                20.0
+            ],
+            [
+                50.15,
+                20.2
+            ],
+            [
+                50.2,
+                20.8
+            ],
+            [
+                50.4,
+                21.45
+            ],
+            [
+                50.65,
+                21.75
+            ]
+        ],
+        "keyCities": [
+            "Rzeszów",
+            "Tarnobrzeg",
+            "Stalowa Wola",
+            "Tarnów",
+            "Mielec",
+            "Dębica"
+        ],
+        "description": "Rozległa, trójkątna kotlina podkarpacka w widłach Wisły i Sanu, pomiędzy pasem wyżyn a łukiem Karpat.",
+        "mnemonic": "Kotlina Sandomierska to wielki trójkąt u zbiegu Wisły i Sanu, u stóp Karpat – Rzeszów i Tarnobrzeg!",
+        "hint": "Trójkątne obniżenie na południowym wschodzie, pod wyżynami a przed Karpatami (Rzeszów).",
+        "category": "region"
     },
     {
         "id": "karpaty",
         "name": "Karpaty",
-        "category": "region",
         "belt": "gory",
         "beltName": "Pas Gór (Karpaty)",
-        "quadrant": "SE",
-        "quadrantName": "Południe (SE/S)",
-        "center": [49.50, 21.00],
-        "polygon": [
-            [49.75, 18.63], [49.82, 19.05], [49.74, 19.59], [49.97, 20.43],
-            [49.95, 21.60], [49.78, 22.77], [49.30, 22.80], [49.00, 22.85],
-            [49.15, 22.50], [49.35, 21.90], [49.40, 21.60], [49.35, 20.95],
-            [49.38, 20.48], [49.18, 20.08], [49.57, 19.52], [49.50, 18.98],
-            [49.75, 18.63]
+        "quadrant": "S",
+        "quadrantName": "Całe Południe (S/SE)",
+        "center": [
+            49.8,
+            21.0
         ],
-        "keyCities": ["Zakopane", "Nowy Sącz", "Sanok", "Krosno", "Bielsko-Biała", "Krynica-Zdrój"],
-        "description": "Potężny łańcuch młodych gór fałdowych ciągnący się wzdłuż całej południowo-wschodniej granicy Polski. Składa się z Karpat Zachodnich i Wschodnich.",
-        "mnemonic": "Karpaty to cały południowy łańcuch górski: od Beskidu Śląskiego przez Tatry aż po Bieszczady!",
-        "hint": "Cały południowy łuk górski wzdłuż granicy ze Słowacją i Ukrainą."
+        "polygon": [
+            [
+                49.75,
+                18.63
+            ],
+            [
+                49.82,
+                19.2
+            ],
+            [
+                49.75,
+                19.8
+            ],
+            [
+                49.98,
+                20.0
+            ],
+            [
+                49.95,
+                21.4
+            ],
+            [
+                49.95,
+                22.8
+            ],
+            [
+                49.3,
+                22.85
+            ],
+            [
+                49.0,
+                22.85
+            ],
+            [
+                49.15,
+                22.5
+            ],
+            [
+                49.4,
+                21.6
+            ],
+            [
+                49.35,
+                20.95
+            ],
+            [
+                49.3,
+                20.4
+            ],
+            [
+                49.18,
+                20.08
+            ],
+            [
+                49.4,
+                19.5
+            ],
+            [
+                49.5,
+                18.8
+            ],
+            [
+                49.75,
+                18.63
+            ]
+        ],
+        "keyCities": [
+            "Nowy Sącz",
+            "Nowy Targ",
+            "Sanok",
+            "Krosno",
+            "Zakopane"
+        ],
+        "description": "Potężny łuk gór fałdowych młodej orogenezy alpejskiej, ciągnący się wzdłuż całej południowej granicy Polski.",
+        "mnemonic": "Karpaty to cały południowy łańcuch górski Polski – od Beskidu Śląskiego po Bieszczady i Tatry!",
+        "hint": "Cały szeroki pas górski wzdłuż całej południowej granicy Polski.",
+        "category": "region"
     },
     {
         "id": "tatry",
         "name": "Tatry",
-        "category": "region",
         "belt": "gory",
         "beltName": "Pas Gór (Karpaty)",
-        "quadrant": "SE",
+        "quadrant": "S",
         "quadrantName": "Południe (S)",
-        "center": [49.27, 20.00],
-        # Najwyższe skaliste pasmo alpejskie dokładnie na granicy wokół Zakopanego (wewnątrz granic Polski!)
-        "polygon": [
-            [49.32, 19.80], [49.34, 20.00], [49.32, 20.20], [49.22, 20.22],
-            [49.19, 20.08], [49.20, 19.85], [49.32, 19.80]
+        "center": [
+            49.25,
+            20.0
         ],
-        "keyCities": ["Zakopane", "Kościelisko", "Bukowina Tatrzańska"],
-        "description": "Najwyższe góry Polski o rzeźbie alpejskiej (Rysy 2499 m n.p.m.). Skalisty masyw dokładnie pośrodku południowej granicy z Zakopanem i Morskim Okiem.",
+        "polygon": [
+            [
+                49.32,
+                19.75
+            ],
+            [
+                49.34,
+                20.05
+            ],
+            [
+                49.32,
+                20.22
+            ],
+            [
+                49.2,
+                20.25
+            ],
+            [
+                49.18,
+                20.08
+            ],
+            [
+                49.18,
+                19.8
+            ],
+            [
+                49.25,
+                19.72
+            ],
+            [
+                49.32,
+                19.75
+            ]
+        ],
+        "keyCities": [
+            "Zakopane",
+            "Kościelisko",
+            "Bukowina Tatrzańska"
+        ],
+        "description": "Najwyższe góry Polski o rzeźbie alpejskiej (Rysy 2499 m n.p.m.). Skalisty masyw dokładnie pośrodku południowej granicy.",
         "mnemonic": "Tatry to najwyższe polskie góry alpejskie z Rysami i Zakopanem – skaliste serce na południowej granicy!",
-        "hint": "Skrajne południe Polski pośrodku łuku Karpat wokół Zakopanego, najwyższe szczyty."
+        "hint": "Skrajne południe Polski pośrodku łuku Karpat wokół Zakopanego, najwyższe szczyty.",
+        "category": "region"
     },
     {
         "id": "pieniny",
         "name": "Pieniny",
-        "category": "region",
         "belt": "gory",
         "beltName": "Pas Gór (Karpaty)",
-        "quadrant": "SE",
-        "quadrantName": "Południe (SE/S)",
-        "center": [49.43, 20.42],
-        # Wapienny pas skałkowy tuż na wschód od Tatr, wzdłuż przełomu Dunajca!
-        # Wyraźny, łatwy do zaznaczenia obszar pomiędzy Tatrami a Beskidem Sądeckim
-        "polygon": [
-            [49.52, 20.22], [49.53, 20.48], [49.48, 20.65], [49.36, 20.62],
-            [49.33, 20.38], [49.36, 20.22], [49.52, 20.22]
+        "quadrant": "S",
+        "quadrantName": "Południe (S)",
+        "center": [
+            49.43,
+            20.42
         ],
-        "keyCities": ["Szczawnica", "Krościenko nad Dunajcem", "Czorsztyn", "Niedzica"],
+        "polygon": [
+            [
+                49.52,
+                20.22
+            ],
+            [
+                49.53,
+                20.48
+            ],
+            [
+                49.48,
+                20.65
+            ],
+            [
+                49.36,
+                20.62
+            ],
+            [
+                49.33,
+                20.38
+            ],
+            [
+                49.36,
+                20.22
+            ],
+            [
+                49.52,
+                20.22
+            ]
+        ],
+        "keyCities": [
+            "Szczawnica",
+            "Krościenko nad Dunajcem",
+            "Czorsztyn",
+            "Niedzica"
+        ],
         "description": "Malownicze wapienne pasmo skałkowe leżące TUŻ NA WSCHÓD OD TATR, słynące ze spływu tratwami Przełomem Dunajca i szczytu Trzy Korony.",
         "mnemonic": "Pieniny leżą TUŻ NA WSCHÓD OD TATR wzdłuż Dunajca – Trzy Korony i spływ tratwami!",
-        "hint": "Tuż na wschód od Tatr, w dolinie rzeki Dunajec (Szczawnica, Trzy Korony)."
+        "hint": "Tuż na wschód od Tatr, w dolinie rzeki Dunajec (Szczawnica, Trzy Korony).",
+        "category": "region"
     },
     {
         "id": "beskidy_bieszczady",
         "name": "Beskidy / Bieszczady",
-        "category": "region",
         "belt": "gory",
         "beltName": "Pas Gór (Karpaty)",
         "quadrant": "SE",
         "quadrantName": "Południe i Południowy Wschód (SE)",
-        "center": [49.55, 21.20],
-        # Beskidy rozciągają się wzdłuż CAŁEGO łuku karpackiego (od Beskidu Śląskiego/Żywieckiego na zachodzie, przez Gorce, Beskid Sądecki i Niski, aż po dzikie Bieszczady na skrajnym wschodzie!)
-        "polygon": [
-            [49.75, 18.63], [49.80, 19.20], [49.75, 19.65], [49.65, 20.50],
-            [49.68, 21.50], [49.72, 22.40], [49.50, 22.65], [49.03, 22.85],
-            [49.18, 22.45], [49.40, 21.60], [49.42, 20.95], [49.50, 20.65],
-            [49.55, 20.48], [49.54, 20.20], [49.40, 19.70], [49.50, 18.98], [49.75, 18.63]
+        "center": [
+            49.5,
+            21.5
         ],
-        "keyCities": ["Wisła", "Szczyrk", "Żywiec", "Krynica-Zdrój", "Dukla", "Ustrzyki Górne", "Cisna"],
-        "description": "Potężny pas gór fliszowych ciągnący się od Beskidu Śląskiego i Żywieckiego na zachodzie, przez Beskid Sądecki i Niski, po Bieszczady na wschodzie ze źródłami rzeki San!",
+        "polygon": [
+            [
+                49.75,
+                18.63
+            ],
+            [
+                49.8,
+                19.2
+            ],
+            [
+                49.75,
+                19.65
+            ],
+            [
+                49.65,
+                20.5
+            ],
+            [
+                49.68,
+                21.5
+            ],
+            [
+                49.72,
+                22.4
+            ],
+            [
+                49.5,
+                22.65
+            ],
+            [
+                49.03,
+                22.85
+            ],
+            [
+                49.18,
+                22.45
+            ],
+            [
+                49.4,
+                21.6
+            ],
+            [
+                49.42,
+                20.95
+            ],
+            [
+                49.5,
+                20.65
+            ],
+            [
+                49.55,
+                20.48
+            ],
+            [
+                49.54,
+                20.2
+            ],
+            [
+                49.4,
+                19.7
+            ],
+            [
+                49.5,
+                18.98
+            ],
+            [
+                49.75,
+                18.63
+            ]
+        ],
+        "keyCities": [
+            "Wisła",
+            "Szczyrk",
+            "Żywiec",
+            "Krynica-Zdrój",
+            "Dukla",
+            "Ustrzyki Górne",
+            "Cisna"
+        ],
+        "description": "Pas gór fliszowych ciągnący się przez Beskidy Zachodnie, Środkowe, aż po Bieszczady na skrajnym wschodzie u źródeł Sanu.",
         "mnemonic": "Beskidy tworzą szeroki łuk wzdłuż całej granicy karpackiej, a ich skrajny wschodni kraniec to Bieszczady ze źródłami Sanu!",
-        "hint": "Ciągną się szerokim łukiem przez całą południową granicę od Wisły po Bieszczady na wschodzie."
+        "hint": "Ciągną się łukiem przez południową granicę od Wisły po Bieszczady na wschodzie.",
+        "category": "region"
     }
 ]

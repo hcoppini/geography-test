@@ -111,10 +111,11 @@ svg_elements.append("""
 """)
 
 svg_elements.append('<g id="svg-regions">')
-# Render larger regions first, and small regions (Pieniny, Tatry, Żuławy) last so they sit on the very top and are 100% clickable!
-top_regions = {'pieniny', 'tatry', 'zulawy_wislane', 'kaszuby', 'niecka_nidzianska'}
-sorted_regions = sorted(geo_regions.REGIONS_DATA, key=lambda r: 10 if r['id'] in top_regions else 1)
-for r in sorted_regions:
+top_regions = {'pieniny', 'tatry', 'zulawy_wislane', 'kaszuby', 'kujawy', 'wyzyna_krakowsko_czestochowska', 'niecka_nidzianska'}
+base_regions = [r for r in geo_regions.REGIONS_DATA if r['id'] not in top_regions]
+top_regs_list = [r for r in geo_regions.REGIONS_DATA if r['id'] in top_regions]
+
+for r in base_regions:
     belt_class = f"region-{r['belt']}"
     svg_elements.append(f"""
       <path id="svg-item-{r['id']}" 
@@ -152,6 +153,23 @@ for rv in geo_rivers.RIVERS_DATA:
               d="{rv['svgPath']}" 
               pointer-events="none" />
       </g>
+    """)
+svg_elements.append('</g>')
+
+svg_elements.append('<g id="svg-top-regions">')
+for r in top_regs_list:
+    belt_class = f"region-{r['belt']}"
+    svg_elements.append(f"""
+      <path id="svg-item-{r['id']}" 
+            class="region-path {belt_class}" 
+            data-id="{r['id']}" 
+            data-name="{r['name']}"
+            d="{r['svgPath']}" 
+            onclick="handleItemClick('{r['id']}')"
+            onmouseenter="showSvgTooltip(event, '{r['name']}', '{r['beltName']}')"
+            onmousemove="moveSvgTooltip(event)"
+            onmouseleave="hideSvgTooltip()">
+      </path>
     """)
 svg_elements.append('</g>')
 
